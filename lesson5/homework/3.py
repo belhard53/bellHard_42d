@@ -5,3 +5,9 @@ d = {'one':11, 'two':22, 'hello':'python', True:False}
 
 """
 
+
+d = {'one':11, 'two':22, 'hello':'python', True:False}
+
+del d[list(d.keys())[1]]
+
+print(d)

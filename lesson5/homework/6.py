@@ -15,3 +15,20 @@
     2) 1 2
     3) 11 44
 '''
+
+
+
+a1 = set([1, 2, 11, 22, 55])
+a2 = set([1, 2, 22, 33, 55])
+a3 = set([1, 2, 33, 44, 55])
+
+print(a1 | a2 | a3)
+
+print(a1.intersection(a2, a3))
+
+print(a1 & a2 & a3) # difference
+print(a1 ^ a2 ^ a3) # symmetric_difference
+
+
+
+print(a1.difference(a2, a3) | a2.difference(a1, a3) | a3.difference(a1, a2))
