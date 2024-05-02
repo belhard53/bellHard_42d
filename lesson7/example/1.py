@@ -120,3 +120,31 @@
 #         break
     
 
+
+# генераторы списков и словарей - List comprehension
+
+# nums = [1,2,3,4,5,9,15,20,19]
+
+# nums2 = []
+# for num in nums:    
+#     if num%2 == 0:
+#         # c = num + 3
+#         nums2.append(num + 3)
+    
+# делает тоже самое что и код выше
+# nums3 = [num + 3 for num in nums if num%2 == 0]    
+
+# print(nums2)
+# print(nums3)
+
+# # for num in [num + 3 for num in nums if num%2 == 0]:
+# #     print(num, end = ", ")
+
+# создаем словарь из списка
+# d = {num+num:num**num for num in nums}
+# print(d)
+
+# d = {input("Имя"):input("возраст") for _ in range(3)}
+# print(d)
+#---------------------------------
+
