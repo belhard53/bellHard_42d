@@ -83,8 +83,8 @@
 
 # d = {1:11, 9:22, 3:33, 4:77, 7:44}
 # print(d.items())
-# d2 = dict(sorted(d.items(), key=lambda key, val:val)) # сортировка по ключу
-# d3 = dict(sorted(d.items(), key=lambda key, val:val)) # сортировка по значению
+# d2 = dict(sorted(d.items(), key=lambda item:item[0])) # сортировка по ключу
+# d3 = dict(sorted(d.items(), key=lambda item:item[1])) # сортировка по значению
 # print(d2)
 # print(d3)
 
