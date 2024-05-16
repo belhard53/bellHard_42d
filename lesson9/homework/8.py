@@ -5,3 +5,9 @@
  - остался только логический тип.
  
 '''
+
+l = [1, 2, "hello", "123", True, False]
+
+l2 = list(filter(lambda x: isinstance(x, str), l))
+
+print(l2)

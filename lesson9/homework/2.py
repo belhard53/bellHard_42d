@@ -4,5 +4,13 @@
 Пример: a = 3, b = 5 -> 12 (3+4+5)
 Пример: a = 5, b = 9 -> 35 (5+6+7+8+9)"
 
-
 '''
+
+def sum_rec(a, b):
+    if a==b:
+        return a
+    else:
+        return a + sum_rec(a+1, b) 
+    
+print(sum_rec(5, 9))
+print(sum_rec(3, 5))
