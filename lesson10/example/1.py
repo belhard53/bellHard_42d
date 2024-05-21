@@ -154,3 +154,26 @@
 # for i in range(10):
 #     print(next(g))
     
+    
+def loging(filename='3.txt') :
+    def _loging(func):
+        def wrapper(*args, **kwargs):
+            with open (filename, "a", encoding='utf8') as f:
+                from time import time, ctime, strftime
+                # f.write(f"{ctime()} - запущена {func.__name__}\n")
+                f.write(f"{strftime('%M:%S')} - запущена {func.__name__}\n")                
+            func(*args, **kwargs)            
+        return wrapper
+    return _loging
+
+@loging(filename="log1.txt")
+def f1():
+    a = 1+1
+    
+@loging(filename="log2.txt")
+def f2():
+    a = 1+1
+    
+f1()
+
+    

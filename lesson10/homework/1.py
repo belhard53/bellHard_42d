@@ -16,3 +16,23 @@
     "kwargs_max_len": 7
 }
 """
+
+
+def dict_from_args(*args, **kwargs):
+    res = {}
+    if all([type(i) is int for i in args]):
+        res['args_sum'] = sum(args)
+    else:
+        raise TypeError("Все позиционные аргументы должны быть целыми")
+
+    if all([type(i) is str for i in kwargs.values()]):
+        res['kwargs_max_len'] = max([len(i) for i in kwargs.values()])
+    else:
+        raise TypeError("Все аргументы - ключевыеслова должны быть строками")
+
+    return res
+
+try:    
+    print(dict_from_args(1, 2, "3", 4, 5,  t='ee', q='123', w='19', e='12', r='qwerty'))
+except Exception as e:
+    print(e)

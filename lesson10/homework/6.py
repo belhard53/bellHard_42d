@@ -16,3 +16,17 @@ print(c10()) -> 12
 print(c10()) -> 13 
 
 """
+
+def counter(n):
+    def c_add():
+        nonlocal n
+        n += 1
+        return n
+    return c_add
+
+c1 = counter(0)
+c2 = counter(10)
+
+print(c1(), c2())
+print(c1(), c2())
+print(c1(), c2())
