@@ -21,19 +21,19 @@ class User:
         self.age = age
         self.projects = []
         
-    
-    # равны ли
-    def __eq__(self, __value: object) -> bool:
-        return self.age == __value.age
+    # след методы определяют каким образом будут сравниваться объекты
+    # равны ли - obj1 == obj2
+    def __eq__(self, other) -> bool:
+        return self.age == other.age
     
     # меньше  ли - obj1 < obj2
-    def __lt__(self, __value: object) -> bool:
-        return self.age < __value.age
+    def __lt__(self, other) -> bool:
+        return self.age < other.age
     # аналогично
-    # __ne__(self, other)   x != y
-    # __le__(self, other)   x <= y
-    # __gt__(self, other)   x > y
-    # __ge__(self, other)   x >= y
+    # __ne__(self, other)   obj1 != obj2
+    # __le__(self, other)   obj1 <= obj2
+    # __gt__(self, other)   obj1 >  obj2
+    # __ge__(self, other)   obj1 >= obj2
 
     
     
@@ -116,4 +116,4 @@ users.add(user2)
 print(users)
 print(users[1])
 
-user1.multiply(1,2)
+
