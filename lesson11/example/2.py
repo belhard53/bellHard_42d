@@ -98,6 +98,7 @@ users = Users()
 user1.add_proj('Calculator')
 user1.add_proj('Memo_pad')
 
+# User.tablename  =
 user1.__class__.tablename = "admin"
 
 print(user2 == user3) # -> True
