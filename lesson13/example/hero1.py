@@ -65,7 +65,7 @@ class Mag(Hero):
         super().__init__(name, health, armor, strong)
         self.mana = mana
         self.spells = spells
-        self.base_spell = fireball
+        self.base_spell = 'fireball'
         
 
 
@@ -86,16 +86,8 @@ class Knight(Hero):
 
 
 
-fireball = Spell('Fireball')        
+def main():
+    print(111, __name__)
 
-hero1 = Hero('Dimitri', 50, 20, 15)    
-hero2 = Hero('Alex', 60, 10, 5)    
-hero3 = Mag('Gendalf', 30, 25, 10, 30, [fireball])    
-print(hero3.base_spell.name)
-hero3.print_info()
-
-print(hero3.mana)
-
-l = [hero1,hero2]
-print(hero1 in l)
-
+if __name__ == '__main__':
+    main()
