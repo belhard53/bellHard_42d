@@ -69,5 +69,20 @@ with Session(autoflush=False, bind=engine) as db:
     # print(quizes)
     
     
-    
-    
+    #pydantic 
+    from schema import *
+    json_question = """
+    {
+        "question":"name1",
+        "answer":"answer1",
+        "wrong1":"wrong11",
+        "wrong2":"wrong22",
+        "wrong3":"wrong33"
+    }
+    """
+
+    q = QuestionSchema.parse_raw(json_question)
+    print(q)
+    print(q.dict())
+    question = Question(**q.dict())
+    print(question)
